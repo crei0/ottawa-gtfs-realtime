@@ -1,11 +1,3 @@
-# Links
-
-- https://nextrip-public-api.developer.azure-api.net/
-- https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/
-- 
-
-
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
