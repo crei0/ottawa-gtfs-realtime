@@ -1,5 +1,7 @@
 import express from "express";
 
+import getRtVehiclePositionsData from "./gtfs/gtfs";
+
 function appRoutes() {
 	const port = process.env.PORT;
 	const app = express();
@@ -13,7 +15,13 @@ function appRoutes() {
 	});
 
 	app.get('/', (req, res) => {
-		res.send('Hello World!');
+		res.send('ottawa-gtfs-realtime-backend is running');
+	});
+
+	app.get('/test', (req, res) => {
+		res.send('doing getRtVehiclePositionsData()');
+
+		getRtVehiclePositionsData();
 	});
 
 	return app;

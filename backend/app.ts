@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import routes from "./appRoutes";
+import routes from "./routes/appRoutes";
 
 dotenv.config();
 
