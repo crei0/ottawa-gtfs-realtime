@@ -21,7 +21,7 @@ function getRtVehiclePositionsData(): Object {
 			'Content-Type': 'application/json',
 		},
 	};
-	
+
 	https.get(options, (res) => {
 		console.log('getRtVehiclePositionsData > statusCode:', res.statusCode);
 		console.log('getRtVehiclePositionsData > headers:', res.headers);
@@ -32,8 +32,8 @@ function getRtVehiclePositionsData(): Object {
 			responseBody = responseBody + chunk;
 		});
 
-		res.on('end',function(){
-			 if (res.statusCode !== 200) {
+		res.on('end', function () {
+			if (res.statusCode !== 200) {
 				console.error("Api call failed with response code " + res.statusCode);
 			} else {
 				console.log("Body :" + responseBody);
@@ -47,8 +47,9 @@ function getRtVehiclePositionsData(): Object {
 
 			console.error(e);
 		});
-	
-	return {}
+	});
+
+	return {};
 }
 
 export default getRtVehiclePositionsData;
