@@ -18,10 +18,18 @@ function appRoutes() {
 		res.send('ottawa-gtfs-realtime-backend is running');
 	});
 
-	app.get('/test', (req, res) => {
-		res.send('doing getRtVehiclePositionsData()');
+	app.get('/gtfs', async (req, res) => {
+		//res.send('doing getRtVehiclePositionsData()');
 
-		getRtVehiclePositionsData();
+		var data = await getRtVehiclePositionsData();
+		console.log('/gtfs 25 > data =', data);
+
+		if (data) {
+			console.log('/gtfs 27 ');
+			res.json(data)
+		} else {
+			res.send('failed request'); // TODO: Fix me
+		}
 	});
 
 	return app;
