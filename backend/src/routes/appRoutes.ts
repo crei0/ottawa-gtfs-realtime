@@ -1,11 +1,11 @@
 import express from "express";
 import cron from 'node-cron';
 
-import { testDatabaseConnection } from "../../gtfs/database"
+import { testDatabaseConnection } from "../gtfs/database"
 import {
 	getRtVehiclePositionsData,
 	importStaticData
-} from "../../gtfs/gtfs";
+} from "../gtfs/gtfs";
 import { getDataAndStoreInDatabase } from "../cron-jobs/getDataAndSaveToDatabase";
 
 function appRoutes() {

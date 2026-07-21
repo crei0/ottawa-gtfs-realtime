@@ -1,8 +1,7 @@
 import * as dotenv from "dotenv";
-import routes from "./routes/appRoutes";
+
+import routes from "./src/routes/appRoutes";
 
 dotenv.config();
 
-const app = routes();
-
-export const viteNodeApp = app;
+export const viteNodeApp = routes();

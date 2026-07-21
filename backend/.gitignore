@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 
 *.env
-not-uploaded*
+*.js
+*.txt
+not-uploaded/*

@@ -1,10 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import { useQuery } from "@tanstack/react-query";
 import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import type { LatLngTuple } from "leaflet";
 
 import "./gtfs.css";
 import data from "../../assets/vp-5-vehicles.json"
-import type { LatLngTuple } from "leaflet";
 
 function GtfsView() {
 	// const { data, isPending, error } = useQuery({
@@ -29,6 +29,7 @@ function GtfsView() {
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 			/>
+
 			{
 				data.map((item) => {
 					const vehicleId = item.Vehicle.Vehicle.Id;
@@ -63,7 +64,6 @@ function GtfsView() {
 					)
 				})
 			}
-			
 		</MapContainer>
 	);
 }

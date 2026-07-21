@@ -1,0 +1,19 @@
+{
+	"name": "database",
+	"version": "0.0.1",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"main": "",
+	"homepage": "https://github.com/crei0/ottawa-gtfs-realtime#readme",
+	"bugs": {
+		"url": "https://github.com/crei0/ottawa-gtfs-realtime/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/crei0/ottawa-gtfs-realtime.git"
+	},
+	"scripts": {
+		"database-generate-empty": "echo 'create table _test (Name string, Age int);' | sqlite3 ./database.sqlite"
+	}
+}

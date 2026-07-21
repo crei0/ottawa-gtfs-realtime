@@ -1,11 +1,20 @@
-import path from 'node:path';
 import https from 'node:https';
-import { importGtfs } from 'gtfs';
-import { readFile } from 'fs/promises';
+import { importGtfs, Config } from 'gtfs';
 
-const config = JSON.parse(
-	await readFile(path.join(import.meta.dirname, 'gtfs-config.json'), 'utf8')
-);
+const gtfsConfig: Config = {
+	"agencies": [
+		{
+			"path": "/home/andreguedes/repositories/web/ottawa-gtfs-realtime/backend/oc_transpo",
+			"exclude": [
+				"shapes",
+				"stop_times",
+				"trips"
+			]
+		}
+	],
+	"sqlitePath": process.env.DATABASE_URL,
+	"exportPath": "/backend/database/exports"
+}
 
 // Get GTFS-RT Vehicle positions file
 function getRtVehiclePositionsData() {
@@ -51,10 +60,11 @@ function getRtVehiclePositionsData() {
 	});
 }
 
-export default getRtVehiclePositionsData;
+function importStaticData() {
+	return importGtfs(gtfsConfig);
+}
 
-// try {
-// 	await importGtfs(config);
-// } catch (error) {
-// 	console.error(error);
-// }
+export {
+	importStaticData,
+	getRtVehiclePositionsData
+};
