@@ -11,12 +11,13 @@
 		"url": "git+https://github.com/crei0/ottawa-gtfs-realtime.git"
 	},
 	"license": "MIT",
-	"author": "",
+	"author": "André Guedes",
 	"type": "module",
 	"main": "index.html",
 	"scripts": {
 		"fe": "npm run start --prefix ./frontend/",
-		"build": "npm run build --prefix ./frontend/"
+		"build": "cd frontend && npm ci && npm run build",
+		"build-local": "cd frontend && npm run build"
 	},
 	"dependencies": {}
 }
