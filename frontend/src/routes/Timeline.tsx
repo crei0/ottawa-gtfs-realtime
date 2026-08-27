@@ -58,7 +58,7 @@ export default function Timeline() {
 	if (currentBatch) {
 		return (
 			<>
-				<div>
+				<div id="controls">
 					<button type="button" title="button-previous" onClick={() => changeBatch(false)}>
 						Previous
 					</button>

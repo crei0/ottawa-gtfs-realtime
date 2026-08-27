@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router";
 import { QueryClient } from "@tanstack/react-query";
@@ -24,14 +24,7 @@ const persister = createAsyncStoragePersister({
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<nav>
-			<ul>
-				<li>
-					<a href="/heatmap">Heatmap</a>
-				</li>
-				<li>
-					<a href="/timeline">Timeline</a>
-				</li>
-			</ul>
+			<a href="/heatmap">Heatmap</a> |<a href="/timeline">Timeline</a>
 		</nav>
 
 		<main>
