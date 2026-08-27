@@ -1,4 +1,4 @@
-[![Node.js CI](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/node.js.yml/badge.svg)](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/build.yml/badge.svg)](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/build.yml)
 
 # Description
 
