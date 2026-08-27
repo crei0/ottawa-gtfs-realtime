@@ -9,8 +9,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-    # Allows you to run this workflow manually from the Actions tab
-    workflow_dispatch:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: 
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -38,9 +38,9 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
+        cache-dependency-path: frontend/package-lock.json
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        path: './frontend/'
     - run: npm run build
   
   deploy:
