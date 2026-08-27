@@ -10,17 +10,15 @@ interface VehicleMarkerProps {
 }
 
 function VehicleMarker({ vehicle }: VehicleMarkerProps) {
-	const { id, vehicle_id } = vehicle;
-
 	const position: LatLngTuple = [vehicle.latitude, vehicle.longitude];
 
 	const colorString: string = createColor(vehicle.route_id);
 
 	return (
-		<Marker key={"vehicle-" + id} position={position} icon={getColoredIconHtml(colorString)}>
+		<Marker key={`route-${vehicle.route_id}-vehicle-${vehicle.id}` } position={position} icon={getColoredIconHtml(colorString)}>
 			<Popup>
 				<details open>
-					<summary>Vehicle {vehicle_id}</summary>
+					<summary>Vehicle {vehicle.id}</summary>
 
 					<ul>
 						<li>Bearing: {vehicle.bearing}</li>
