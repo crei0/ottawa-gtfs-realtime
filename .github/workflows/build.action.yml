@@ -51,6 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo running start
+      - run: cd frontend/dist
       - run: pwd
       - run: ls
       - run: ll
