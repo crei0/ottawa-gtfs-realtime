@@ -2,7 +2,7 @@ import type { LatLngTuple } from "leaflet";
 import { Marker, Popup } from "react-leaflet";
 import createColor from "create-color";
 
-import type { RtVehiclePositions } from "../../types/RtVehiclePositions.types.ts";
+import type { RtVehiclePositions } from "../../types.ts";
 import getColoredIconHtml from "../../assets/icons/getColoredIconHtml.ts";
 
 interface VehicleMarkerProps {
