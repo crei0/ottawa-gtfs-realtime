@@ -16,6 +16,10 @@ The target was to visualize the locations of OC Transpo's vehicles during a day,
 
 ![The generated heatmap image](frontend/e2e/screenshots/heatmap.png)
 
+### Github Pages
+
+[https://crei0.github.io/ottawa-gtfs-realtime/](https://crei0.github.io/ottawa-gtfs-realtime/)
+
 ## More information
 
 ### Supabase's `edge-functions`
