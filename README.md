@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/node.js.yml/badge.svg)](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/node.js.yml)
+
 # Description
 
 This project was created for me to experiment with [OC Transpo](https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/)'s APIs/data.
