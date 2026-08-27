@@ -1,4 +1,4 @@
-[![Node.js CI](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/build.yml/badge.svg)](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/build.yml)
+[![Build & Deploy to Github Pages](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/build.action.yml/badge.svg)](https://github.com/crei0/ottawa-gtfs-realtime/actions/workflows/build.action.yml)
 
 # Description
 
