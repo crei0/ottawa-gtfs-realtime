@@ -50,7 +50,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - run: echo running start
+      - run: pwd
       - run: ls
+      - run: ll
+      - run: echo running end
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
