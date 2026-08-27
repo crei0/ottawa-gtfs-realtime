@@ -50,22 +50,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo running start
-      - run: cd frontend/dist
-      - run: pwd
-      - run: ls
-      - run: ll
-      - run: echo running end
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - run:  |
+          echo start
+          pwd
+          ls
+          echo end
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'frontend/dist'
-      - run: ls
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-      - run: ls
