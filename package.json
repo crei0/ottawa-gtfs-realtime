@@ -15,8 +15,8 @@
 	"type": "module",
 	"main": "index.html",
 	"scripts": {
-		"be": "npm --prefix ./deprecated/backend/ run start",
-		"fe": "npm --prefix ./frontend/ run start"
+		"fe": "npm run start --prefix ./frontend/",
+		"build": "npm run build --prefix ./frontend/"
 	},
 	"dependencies": {}
 }

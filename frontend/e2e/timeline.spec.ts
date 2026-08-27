@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("Timeline > Take screenshots", async ({ page }) => {
 	test.setTimeout(90 * 60 * 1000);
 
-	await page.goto("http://localhost:5173/#timeline");
+	await page.goto("http://localhost:5173/timeline");
 
     // HACK - Needed to wait for fade-in of map tiles
 	await page.waitForTimeout(2000);
