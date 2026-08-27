@@ -1,0 +1,64 @@
+{
+	"name": "ottawa-gtfs-realtime-be",
+	"version": ".0.1",
+	"description": "",
+	"license": "GPL-3.0-or-later",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"homepage": "https://github.com/crei0/ottawa-gtfs-realtime#readme",
+	"bugs": {
+		"url": "https://github.com/crei0/ottawa-gtfs-realtime/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/crei0/ottawa-gtfs-realtime.git"
+	},
+	"scripts": {
+		"start": "npm run dev",
+		"test": "node --import tsx --experimental-test-module-mocks --test",
+		"test-only": "node --import tsx --experimental-test-module-mocks --test --test-only",
+		"dev": "vite",
+		"build": "vite build",
+		"initialize": "npm run 'gtfs-static-zip-download' && npm run 'gtfs-static-zip-unzip'",
+		"gtfs-static-zip-download": "curl -L https://oct-gtfs-emasagcnfmcgeham.z01.azurefd.net/public-access/GTFSExport.zip -o ./oc_transpo/GTFSExport.zip",
+		"gtfs-static-zip-unzip": "unzip -o ./oc_transpo/GTFSExport.zip -d ./oc_transpo/",
+		"database-schema-generate": "kysely-codegen --out-file ./src/database/Database.d.ts",
+		"supabase-login": "npx supabase login",
+		"supabase-link": "npx supabase link --project-ref pdgqbjyjoavqggacplid",
+		"supabase-database-schema-generate": "npx supabase gen types typescript --project-id 'pdgqbjyjoavqggacplid' --schema public > ./src/database/database.types.ts"
+	},
+	"devDependencies": {
+		"@prisma/adapter-pg": "^7.9.1",
+		"@swc/core": "^1.15.46",
+		"@types/better-sqlite3": "^7.6.13",
+		"@types/compression": "^1.8.1",
+		"@types/express": "^5.0.6",
+		"@types/morgan": "^1.9.10",
+		"@types/node": "^25.9.5",
+		"@types/pg": "^8.21.0",
+		"@types/unzipper": "^0.10.11",
+		"kysely-codegen": "^0.20.0",
+		"prisma": "^7.9.1",
+		"supabase": "^2.113.0",
+		"tsx": "^4.23.1",
+		"typescript": "^7.0.2",
+		"vite": "^8.1.5",
+		"vite-plugin-node": "^8.0.0"
+	},
+	"dependencies": {
+		"@prisma/client": "^7.9.1",
+		"@supabase/server": "^1.4.1",
+		"@supabase/supabase-js": "^2.112.2",
+		"better-sqlite3": "^12.11.1",
+		"compression": "^1.8.1",
+		"dotenv": "^17.4.2",
+		"dotenv-expand": "^1000.0.0",
+		"express": "^5.2.1",
+		"kysely": "^0.29.4",
+		"morgan": "^1.11.0",
+		"node-cron": "^4.6.0",
+		"pg": "^8.23.0",
+		"unzipper": "^0.12.5"
+	}
+}

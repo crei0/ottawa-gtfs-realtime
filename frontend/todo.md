@@ -1,0 +1,6 @@
+- clean git history
+- make the repo public
+- get back
+- write blog article
+- create npm react leaflet for heatmaps package?
+- npm audit

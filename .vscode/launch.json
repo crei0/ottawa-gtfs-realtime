@@ -1,0 +1,22 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node-terminal",
+			"name": "Backend - Start",
+			"request": "launch",
+			"command": "npm run start",
+			"cwd": "${workspaceFolder}/deprecated/backend"
+		},
+		{
+			"type": "node-terminal",
+			"name": "Backend - Test-only",
+			"request": "launch",
+			"command": "npm run test-only",
+			"cwd": "${workspaceFolder}/deprecated/backend"
+		}
+	]
+}

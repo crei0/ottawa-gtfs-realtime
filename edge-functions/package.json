@@ -1,0 +1,21 @@
+{
+  "name": "edge-functions",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "",
+  "scripts": {
+    "start": "supabase start",
+    "download": "supabase functions download",
+    "upload": "supabase functions deploy",
+    "docker-status": "systemctl is-active docker",
+    "status": "supabase status",
+    "stop": "supabase stop",
+    "supabase-database-schema-generate": "npx supabase gen types typescript --project-id 'pdgqbjyjoavqggacplid' --schema public > ./database.types.ts"
+  },
+  "devDependencies": {
+    "supabase": "^2.113.0"
+  }
+}

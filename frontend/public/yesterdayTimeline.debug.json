@@ -1,0 +1,97 @@
+{
+  "date": "2026-08-20",
+  "batches": {
+    "1374": [
+      {
+        "id": 313581,
+        "vehicle_id": 2550,
+        "latitude": 45.4122,
+        "longitude": -75.6588,
+        "bearing": 102,
+        "speed": 0,
+        "timestamp": "2026-08-20T14:49:16+00:00",
+        "route_id": "61",
+        "batch_id": 1374
+      },
+      {
+        "id": 313582,
+        "vehicle_id": 4727,
+        "latitude": 45.4034,
+        "longitude": -75.734,
+        "bearing": 339,
+        "speed": 0,
+        "timestamp": "2026-08-20T14:49:11+00:00",
+        "route_id": "11",
+        "batch_id": 1374
+      },
+      {
+        "id": 313583,
+        "vehicle_id": 2547,
+        "latitude": 45.3927,
+        "longitude": -75.6079,
+        "bearing": 63,
+        "speed": 0,
+        "timestamp": "2026-08-20T14:49:16+00:00",
+        "route_id": "41",
+        "batch_id": 1374
+      },
+      {
+        "id": 313584,
+        "vehicle_id": 4728,
+        "latitude": 45.4185,
+        "longitude": -75.6585,
+        "bearing": 193,
+        "speed": 0,
+        "timestamp": "2026-08-20T14:49:11+00:00",
+        "route_id": "785",
+        "batch_id": 1374
+      }
+    ],
+    "1375": [
+      {
+        "id": 313907,
+        "vehicle_id": 2550,
+        "latitude": 45.4153,
+        "longitude": -75.6568,
+        "bearing": 18,
+        "speed": 0.44704,
+        "timestamp": "2026-08-20T14:49:59+00:00",
+        "route_id": "61",
+        "batch_id": 1375
+      },
+      {
+        "id": 313908,
+        "vehicle_id": 4727,
+        "latitude": 45.4026,
+        "longitude": -75.7371,
+        "bearing": 238,
+        "speed": 4.91744,
+        "timestamp": "2026-08-20T14:49:56+00:00",
+        "route_id": "11",
+        "batch_id": 1375
+      },
+      {
+        "id": 313909,
+        "vehicle_id": 2547,
+        "latitude": 45.3929,
+        "longitude": -75.6075,
+        "bearing": 317,
+        "speed": 7.59968,
+        "timestamp": "2026-08-20T14:50:01+00:00",
+        "route_id": "41",
+        "batch_id": 1375
+      },
+      {
+        "id": 313910,
+        "vehicle_id": 4728,
+        "latitude": 45.4185,
+        "longitude": -75.6585,
+        "bearing": 193,
+        "speed": 0,
+        "timestamp": "2026-08-20T14:49:56+00:00",
+        "route_id": "785",
+        "batch_id": 1375
+      }
+    ]
+  }
+}

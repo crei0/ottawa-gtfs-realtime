@@ -1,0 +1,82 @@
+info:
+  name: Get the map static data
+  type: http
+  seq: 1
+  tags:
+    - static
+
+http:
+  method: GET
+  url: "{{baseUrl}}/map.json"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: successful operation
+    request:
+      url: "{{baseUrl}}/map"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "stops": [
+                {
+                  "id": "",
+                  "name": "",
+                  "latitude": 0,
+                  "longitude": 0
+                }
+              ],
+              "routes": [
+                {
+                  "id": "",
+                  "color": "",
+                  "text_color": "",
+                  "sort_order": 0
+                }
+              ]
+            }
+          ]
+  - name: 500 Response
+    description: Error obtaining the data
+    request:
+      url: "{{baseUrl}}/map"
+      method: GET
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+  - name: default Response
+    description: Unexpected error
+    request:
+      url: "{{baseUrl}}/map"
+      method: GET
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "code": "",
+            "message": ""
+          }
+
+docs: Includes all the Routes and all the Stops

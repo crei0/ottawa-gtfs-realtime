@@ -1,0 +1,73 @@
+info:
+  name: Get the vehicle positions
+  type: http
+  seq: 1
+  tags:
+    - realtime
+
+http:
+  method: GET
+  url: "{{baseUrl}}/vehicle-positions"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: successful operation
+    request:
+      url: "{{baseUrl}}/vehicle-positions"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "bearing": 0,
+              "latitude": 0,
+              "longitude": 0,
+              "route_id": 0,
+              "speed": 0,
+              "timestamp": 0,
+              "vehicle_id": 0
+            }
+          ]
+  - name: 500 Response
+    description: Error obtaining the data
+    request:
+      url: "{{baseUrl}}/vehicle-positions"
+      method: GET
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+  - name: default Response
+    description: Unexpected error
+    request:
+      url: "{{baseUrl}}/vehicle-positions"
+      method: GET
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "code": "",
+            "message": ""
+          }
+
+docs: Data is updated every 1-5 minutes

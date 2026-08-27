@@ -1,0 +1,63 @@
+{
+  "name": "ottawa-gtfs-realtime",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "",
+  "main": "index.html",
+  "homepage": "https://github.com/crei0/ottawa-gtfs-realtime#readme",
+  "bugs": {
+    "url": "https://github.com/crei0/ottawa-gtfs-realtime/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crei0/ottawa-gtfs-realtime.git"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "generate-timeline-video": "npm run e2e-generate-timeline-screenshots && npm run ffmpeg-generate-timeline-video",
+    "e2e-generate-timeline-screenshots": "rm -rf ./e2e/screenshots/timeline-*.png & npx playwright test timeline.spec.ts --project=chromium",
+    "e2e-generate-heatmap-screenshot": "npx playwright test heatmap.spec.ts --project=chromium",
+    "e2e-generate-all-screenshots-and-video": "npm run e2e-generate-heatmap-screenshot & npm run e2e-generate-timeline-screenshots & npm run ffmpeg-generate-timeline-video",
+    "ffmpeg-generate-timeline-video": "ffmpeg -y -f image2 -r 25 -pattern_type glob -i 'e2e/screenshots/timeline-*.png' -vcodec libx264 -crf 22 video.mp4",
+    "json-format": "jq '.' ./yesterdayTimeline.json > ./public/yesterdayTimeline.json && rm ./yesterdayTimeline.json",
+    "dependencies-check": "depcheck"
+  },
+  "dependencies": {
+    "@react-leaflet/core": "^3.0.0",
+    "@supabase/supabase-js": "^2.112.2",
+    "@tanstack/query-async-storage-persister": "^5.101.4",
+    "@tanstack/react-query": "^5.101.0",
+    "@tanstack/react-query-persist-client": "^5.101.4",
+    "create-color": "^2.0.6",
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
+    "playwright": "^1.62.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-leaflet": "^5.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "@types/leaflet": "^1.9.21",
+    "@types/leaflet.heat": "^0.2.5",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "depcheck": "^1.4.7",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  }
+}

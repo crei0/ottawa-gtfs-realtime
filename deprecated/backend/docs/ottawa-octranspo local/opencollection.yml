@@ -1,0 +1,48 @@
+opencollection: 1.0.0
+
+info:
+  name: ottawa-octranspo local
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: baseUrl
+      value: http://localhost:3000
+      description: Server URL
+    - name: SUPABASE_DATABASE_PASSWORD
+      value: z7uZFTxhK2QPmJLt
+    - name: DATABASE_URL
+      value: postgresql://postgres.pdgqbjyjoavqggacplid:${SUPABASE_DATABASE_PASSWORD}@aws-0-ca-central-1.pooler.supabase.com:6543/postgres?pgbouncer=true
+    - name: DIRECT_URL
+      value: postgresql://postgres:${SUPABASE_DATABASE_PASSWORD}@db.pdgqbjyjoavqggacplid.supabase.co:5432/postgres
+    - name: SUPABASE_URL
+      value: https://pdgqbjyjoavqggacplid.supabase.co
+    - name: SUPABASE_PUBLISHABLE_KEY
+      value: sb_publishable_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - name: SUPABASE_SECRET_KEY
+      value: sb_secret_TSSzMPyAFpHLdKWsyC7_iA_HgSd_pQt
+    - name: SUPABASE_JWKS_URL
+      value: https://pdgqbjyjoavqggacplid.supabase.co/auth/v1/.well-known/jwks.json
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    openapi:
+      - sourceUrl: ../routes.openapi.yaml
+        groupBy: tags
+        lastSyncDate: 2026-07-30T12:21:48.012Z
+        specHash: 61d4f0f0bbb751a64d5b82fdadae06ab
+        autoCheck: true
+        autoCheckInterval: 5

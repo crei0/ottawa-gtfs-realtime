@@ -1,0 +1,43 @@
+<svg width="32" xmlns="http://www.w3.org/2000/svg" height="32"
+    id="screenshot-ce8e9df1-5094-800e-8008-687418ef8ed3" viewBox="0 0 32 32"
+    xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+    <g id="shape-ce8e9df1-5094-800e-8008-687418ef8ed3" rx="0" ry="0">
+        <g id="shape-ce8e9df1-5094-800e-8008-68733f22642d">
+            <g class="fills" id="fills-ce8e9df1-5094-800e-8008-68733f22642d">
+                <rect rx="16" ry="16" x="0" y="2.842170943040401e-14"
+                    transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+                    width="32" height="32.000000000000085"
+                    style="fill: #995729 fill-opacity: 1;" />
+            </g>
+        </g>
+        <g id="shape-ce8e9df1-5094-800e-8008-68738b515b6a">
+            <g class="fills" id="fills-ce8e9df1-5094-800e-8008-68738b515b6a">
+                <path
+                    d="M9,9L13,9C13,9,16,9,16,13C16,17,16,19,16,19C16,19,16,23,19,23C21,23,23,23,23,23" />
+            </g>
+            <g
+                id="strokes-fce21b90-27ad-808b-8008-687425bf6ab0-ce8e9df1-5094-800e-8008-68738b515b6a"
+                class="strokes">
+                <g class="stroke-shape">
+                    <path
+                        d="M9,9L13,9C13,9,16,9,16,13C16,17,16,19,16,19C16,19,16,23,19,23C21,23,23,23,23,23"
+                        style="fill: none; stroke-width: 1; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-dasharray: 2, 2;" />
+                </g>
+            </g>
+        </g>
+        <g id="shape-ce8e9df1-5094-800e-8008-687356223027">
+            <g class="fills" id="fills-ce8e9df1-5094-800e-8008-687356223027">
+                <ellipse cx="9" cy="9" rx="2" ry="2"
+                    transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+                    style="fill: rgb(255, 255, 255); fill-opacity: 1;" />
+            </g>
+        </g>
+        <g id="shape-ce8e9df1-5094-800e-8008-68736347e638">
+            <g class="fills" id="fills-ce8e9df1-5094-800e-8008-68736347e638">
+                <ellipse cx="23" cy="23" rx="2" ry="2"
+                    transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+                    style="fill: rgb(255, 255, 255); fill-opacity: 1;" />
+            </g>
+        </g>
+    </g>
+</svg>

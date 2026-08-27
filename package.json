@@ -1,0 +1,22 @@
+{
+	"name": "ottawa-gtfs-realtime",
+	"version": "0.0.1",
+	"description": "",
+	"homepage": "https://github.com/crei0/ottawa-gtfs-realtime#readme",
+	"bugs": {
+		"url": "https://github.com/crei0/ottawa-gtfs-realtime/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/crei0/ottawa-gtfs-realtime.git"
+	},
+	"license": "MIT",
+	"author": "",
+	"type": "module",
+	"main": "index.html",
+	"scripts": {
+		"be": "npm --prefix ./deprecated/backend/ run start",
+		"fe": "npm --prefix ./frontend/ run start"
+	},
+	"dependencies": {}
+}

@@ -1,0 +1,97 @@
+openapi: 3.2.0
+info:
+  title: ottawa-gtfs-realtime - OpenAPI 3.2
+  description: |-
+    OpenAPI for `ottawa-gtfs-realtime`
+
+    Data comes from [OC Transpo](https://www.octranspo.com/en/plan-your-trip/travel-tools/developers)
+  contact:
+    email: guedes.andre@gmail.com
+  version: 0.0.2
+externalDocs:
+  description: Source code
+  url: https://github.com/crei0/ottawa-gtfs-realtime
+paths:
+  /vehicle-positions/{batchId}:
+    get:
+      tags:
+        - realtime
+      summary: Get the vehicle positions
+      description: Data is updated every 1-5 minutes
+      parameters:
+        - name: batchId
+          in: path
+          description: The specific `batch ID` to get, if not specified the last one will be retrieved
+          required: false
+          schema:
+            type: number
+      operationId: getLastBatchOfRtVehiclePositions
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RtVehiclePositions'
+        '500':
+          description: Error obtaining the data
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    RtVehiclePositions:
+      type: object
+      properties:
+        bearing:
+          type: number
+          examples: [123]
+        latitude:
+          type: number
+          examples: [45.337378]
+        longitude:
+          type: number
+          examples: [45.337378]
+        route_id:
+          type: number
+          examples: [32]
+        speed:
+          type: number
+          examples: [45]
+        timestamp:
+          type: number
+          examples: [1785355630]
+        vehicle_id:
+          type: number
+          examples: [2025]
+        batch_id:
+          type: number
+          examples: [123]
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+      xml:
+        name: '##default'
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
+  

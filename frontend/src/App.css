@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+
+/* Layout */
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#metadata {
+    position: absolute;
+    z-index: 1000;
+    margin-top: 28px;
+    padding: 8px;
+    background-color: #fff;
+}
+
+/* Map icons */
+.map-icon {
+    background: transparent;
+}

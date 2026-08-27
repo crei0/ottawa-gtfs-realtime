@@ -1,0 +1,20 @@
+{
+	"name": "database",
+	"version": "0.0.1",
+	"description": "",
+	"license": "MIT",
+	"author": "",
+	"main": "",
+	"homepage": "https://github.com/crei0/ottawa-gtfs-realtime#readme",
+	"bugs": {
+		"url": "https://github.com/crei0/ottawa-gtfs-realtime/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/crei0/ottawa-gtfs-realtime.git"
+	},
+	"scripts": {
+		"database-export-schema": "sqlite3 ./database.sqlite.db   '.schema'  >  database.sqlite.schema",
+		"database-schema-generate-tables": "cat database.sqlite.schema | sqlite3 ./database.sqlite.db"
+	}
+}
